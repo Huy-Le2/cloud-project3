@@ -11,6 +11,7 @@ def count_words(file_path):
 def get_most_frequent_words(file_path, top_n=3, handle_contractions=False):
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read().lower()
+        rec = {}
         
         if handle_contractions:
             text = re.sub(r"n't", " not", text)
@@ -39,9 +40,9 @@ def get_ip_address():
 
 def main():
 
-    if_file = "/home/data/IF-1.txt"
-    song_file = "/home/data/AlwaysRememberUsThisWay-1.txt"
-    output_file = "/home/data/output/result.txt"
+    if_file = "./home/data/IF-1.txt"
+    song_file = "./home/data/AlwaysRememberUsThisWay-1.txt"
+    output_file = "./home/data/output/result.txt"
     
 
     if_word_count = count_words(if_file)
