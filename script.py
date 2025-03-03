@@ -11,7 +11,6 @@ def count_words(file_path):
 def get_most_frequent_words(file_path, top_n=3, handle_contractions=False):
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read().lower()
-        rec = {}
         
         if handle_contractions:
             text = re.sub(r"n't", " not", text)
